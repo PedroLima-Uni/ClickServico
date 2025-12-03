@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #ebebeb;
+  color: #000;
+  overflow-x: hidden;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.topbar {
+  background-color: #fddfa2;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo { display:flex; align-items:center; font-weight:700; font-size:1.1rem; }
+.logo img { height:35px; margin-right:8px; }
+.logo span { color:#103569; }
+
+.search-wrapper { position:relative; width:35%; }
+.search-bar {
+  width:100%;
+  padding:8px 45px 8px 14px;
+  border-radius:20px;
+  border:1px solid #ccc;
+}
+.search-divider {
+  position:absolute; right:40px; top:50%; transform:translateY(-50%);
+  height:60%; width:1px; background:#ccc;
+}
+.search-icon { position:absolute; right:12px; top:50%; transform:translateY(-50%); width:20px; opacity:.6; cursor:pointer; }
+
+.buttons { display:flex; gap:15px; align-items:center; }
+.btn-profissional { background:#0b2545; color:#fff; border:none; padding:8px 14px; border-radius:6px; cursor:pointer; }
+.btn-profissional:hover { background:#103569; }
+.link { color:#000; text-decoration:none; font-weight:500; }
+
+/* ==========================
+   CONTEÚDO
+========================== */
+.page {
+  width: 100%;
+  max-width: 1300px; 
+  margin: 90px auto;
+  padding: 0 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0A1A2F;
+}
+
+/* História */
+.history-box {
+  background-color: #FFF7D6;
+  padding: 30px;
+  border-radius: 14px;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  color: #0A1A2F;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.members-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0A1A2F;
+}
+
+/* ==========================
+   NOVO GRID (ESTILO PROFISSIONAL)
+========================== */
+.grid-equipe {
+  display: grid;
+  /* 5 colunas iguais */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0; 
+}
+
+.member-profile {
+  text-align: center;
+  padding: 0 20px; 
+  border-right: 1px solid #000;
+}
+
+/* Remove a borda do último item para não fechar a caixa */
+.member-profile:last-child {
+  border-right: none;
+}
+
+.member-profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  border: 3px solid #ddd; 
+}
+
+.member-profile h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0A1A2F;
+  margin-bottom: 6px; 
+}
+
+.member-profile .age {
+  display: block;
+  font-size: 17px;
+  color: #555;
+  font-weight: 500;
+}
+
+.spacer {
+  width: 40px;
+  height: 3px;
+  background-color: #fddfa2; 
+  margin: 15px auto; 
+}
+
+.member-profile p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #333;
+  text-align: center; 
+  padding: 0 5px;
+}
+
+/* ==========================
+   RESPONSIVIDADE GRID
+========================== */
+@media (max-width: 1100px) {
+  .grid-equipe {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+  }
+
+  .member-profile {
+    border-right: none; 
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; 
+  }
+  
+  /* Remove borda dos últimos elementos da linha para não ficar estranho */
+  .member-profile:nth-last-child(-n+2) {
+      border-bottom: none;
+  }
+}
+
+/* Mobile (1 coluna - um embaixo do outro) */
+@media (max-width: 700px) {
+  .grid-equipe {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .member-profile {
+    border-right: none;
+    border-bottom: 1px solid #000; 
+    padding: 0 0 40px 0;
+  }
+
+  .member-profile:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer{
+  width:100%;
+  background:#103569;
+  padding:50px 0;
+  color:#fff;
+  margin-top: 40px;
+}
+
+.footer-container{
+  width:90%; max-width:1300px; margin:0 auto;
+  display:flex; justify-content:space-between;
+  flex-wrap:wrap; gap:50px;
+}
+
+.footer-box{ flex:1; min-width:220px; }
+.footer-box h3{ font-size:1.15rem; margin-bottom:18px; text-transform:uppercase; font-weight:600; }
+.footer-box a{ display:block; color:#ffffffcc; margin-bottom:10px; text-decoration:none; font-size:0.95rem; transition:color .2s; }
+.footer-box a:hover{ color:#fff; text-decoration:underline; }
+
+.footer-icons{ display:flex; gap:12px; margin-top:15px; }
+.footer-icons img{ width:32px; height:32px; object-fit:contain; cursor:pointer; }
+
+.store-buttons{ display:flex; flex-direction:column; gap:10px; margin-top:10px; }
+.store-buttons img{ width:160px; height:auto; object-fit:contain; }
+
+/* RESP */
+@media (max-width: 800px){
+  .page { margin-top: 130px; }
+}

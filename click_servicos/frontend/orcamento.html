@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickServiço - Solicite um Orçamento</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/orcamento.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="inicial.html" class="logo" style="text-decoration: none; color: inherit;">
+      <img src="img/click2.png" alt="ClickServiço" />
+      <span>ClickServiço</span>
+    </a>
+
+    <div class="search-wrapper">
+      <input type="text" placeholder="Buscar serviços, profissionais..." class="search-bar">
+      <div class="search-divider"></div>
+      <img src="img/lupa_escura.png" class="search-icon" alt="Buscar">
+    </div>
+
+    <div class="buttons">
+      <button class="btn-profissional">Seja um profissional</button>
+      <a href="#" class="link">Meus pedidos</a>
+      <a href="#" class="link">Entrar</a>
+    </div>
+  </header>
+
+  <main class="page orcamento-page">
+
+    <section class="form-area">
+
+      <h1>Solicite um orçamento</h1>
+
+      <form id="formOrcamento">
+
+        <label>Descreva o serviço desejado:</label>
+        <textarea placeholder="Ex: reparo de vazamento, troca de registros, desentupimento, etc."></textarea>
+
+        <label>Data e hora preferenciais:</label>
+        <div class="date-time">
+
+          <div class="input-icon">
+            <img src="img/calendario.png" alt="Calendário">
+            <input type="date">
+          </div>
+
+          <div class="input-icon">
+            <img src="img/relogio.png" alt="Relógio">
+            <select id="hora">
+              <option value="">Selecione...</option>
+            </select>
+          </div>
+
+        </div>
+
+        <h3>Endereço</h3>
+
+        <div class="endereco-linha">
+          <input type="text" id="cep" placeholder="CEP">
+          <input type="text" id="logradouro" placeholder="Logradouro">
+          <input type="text" id="numero" placeholder="Número">
+        </div>
+
+        <div class="endereco-linha">
+          <input type="text" id="bairro" placeholder="Bairro">
+          <input type="text" id="cidade" placeholder="Cidade">
+        </div>
+
+        <button class="btn-enviar" type="submit">Enviar orçamento</button>
+
+      </form>
+
+    </section>
+
+    <aside class="perfil">
+      <img src="img/rodolfo.png" alt="Profissional">
+      <h2>RODOLFO GUIMARÃES</h2>
+      <p class="funcao">ENCANADOR</p>
+      <div class="rating">⭐ 4.9</div>
+      <p class="local">📍 Santa Bárbara d’Oeste - SP</p>
+
+      <h3>Serviços oferecidos</h3>
+      <ul>
+        <li>Detecção e Reparo de Vazamentos</li>
+        <li>Desentupimento</li>
+        <li>Instalação de Caixas d’Água</li>
+        <li>Reparo em Descargas e Válvulas Hidráulicas</li>
+        <li>Instalação e Reparo de Torneiras, Pias e Chuveiros</li>
+        <li>Manutenção em Sistema de Aquecimento (gás/elétrico)</li>
+        <li>Revisão Preventiva</li>
+        <li>Reparo de Encanamentos</li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <div id="sucesso" class="mensagem-sucesso">
+    <div class="box">
+      <span>✔</span>
+      <p>Seu orçamento foi enviado com sucesso!<br>Acompanhe em “Meus pedidos”.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3>SOBRE</h3>
+        <a href="quem_somos.html">Quem Somos</a>
+        <a href="missao.html">Missão</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>CONTATO</h3>
+        <a href="tel:+551940028922">📞 (19) 4002-8922</a>
+        <a href="mailto:contato@cs.com">📧 contato@cs.com</a>
+        <a href="#">Atendimento</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>PAGAMENTO</h3>
+        <div class="footer-icons">
+          <img src="img/mastercard.png" alt="Mastercard">
+          <img src="img/visa.png" alt="Visa">
+          <img src="img/pix.png" alt="Pix">
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>SIGA-NOS</h3>
+        <div class="footer-icons">
+          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>BAIXAR APP</h3>
+        <div class="store-buttons">
+          <a href="#"><img src="img/googleplay.png" alt="Google Play"></a>
+          <a href="#"><img src="img/apple.png" alt="App Store"></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/orcamento.js"></script>
+</body>
+</html>

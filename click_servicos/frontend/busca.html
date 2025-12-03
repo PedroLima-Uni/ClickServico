@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickServiço - Encanadores</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/busca.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="inicial.html" class="logo" style="text-decoration: none; color: inherit;">
+      <img src="img/click2.png" alt="ClickServiço" />
+      <span>ClickServiço</span>
+    </a>
+
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Buscar serviços, profissionais..." class="search-bar">
+      <div class="search-divider"></div>
+      <img src="img/lupa_escura.png" class="search-icon" alt="Buscar">
+    </div>
+
+    <div class="buttons">
+      <button class="btn-profissional">Seja um profissional</button>
+      <a href="#" class="link">Meus pedidos</a>
+      <a href="#" class="link">Entrar</a>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <aside class="sidebar">
+      <h2>ENCANADOR</h2>
+      <p class="results">100 resultados</p>
+    </aside>
+
+    <section class="content">
+      <div class="controls">
+        <div class="sort">
+          <label for="sortSelect">Ordenar por:</label>
+          <select id="sortSelect">
+            <option value="distance">Distância</option>
+            <option value="rating">Avaliação</option>
+            <option value="name">Nome</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="cards" class="cards-grid">
+
+        <a href="perfil.html" style="text-decoration: none; color: inherit;">
+          <article class="card" data-name="Rodolfo Guimarães" data-rating="4.9" data-distance="1.2">
+            <img class="card-img" src="img/rodolfo.png" alt="Rodolfo Guimarães">
+            <div class="card-body">
+              <h3>RODOLFO GUIMARÃES</h3>
+              <p class="role">ENCANADOR</p>
+              <div class="meta">
+                <span class="rating">★ 4.9</span>
+                <span class="location">Santa Bárbara d'Oeste - SP</span>
+              </div>
+            </div>
+          </article>
+        </a>
+
+        <article class="card" data-name="Guilherme Freitas" data-rating="5.0" data-distance="1.5">
+          <img class="card-img" src="img/guilherme.png" alt="Guilherme Freitas">
+          <div class="card-body">
+            <h3>GUILHERME FREITAS</h3>
+            <p class="role">ENCANADOR / ELETRICISTA</p>
+            <div class="meta">
+              <span class="rating">★ 5.0</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Joaquim Silva" data-rating="4.8" data-distance="2.3">
+          <img class="card-img" src="img/joaquim.png" alt="Joaquim Silva">
+          <div class="card-body">
+            <h3>JOAQUIM SILVA</h3>
+            <p class="role">ENCANADOR</p>
+            <div class="meta">
+              <span class="rating">★ 4.8</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Carlos Santos" data-rating="4.9" data-distance="3.0">
+          <img class="card-img" src="img/carlos.png" alt="Carlos Santos">
+          <div class="card-body">
+            <h3>CARLOS SANTOS</h3>
+            <p class="role">ENCANADOR</p>
+            <div class="meta">
+              <span class="rating">★ 4.9</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Filipe Mendonça" data-rating="4.9" data-distance="3.2">
+          <img class="card-img" src="img/filipe.png" alt="Filipe Mendonça">
+          <div class="card-body">
+            <h3>FILIPE MENDONÇA</h3>
+            <p class="role">ENCANADOR</p>
+            <div class="meta">
+              <span class="rating">★ 4.9</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Saulo Pedro" data-rating="4.7" data-distance="4.1">
+          <img class="card-img" src="img/saulo.png" alt="Saulo Pedro">
+          <div class="card-body">
+            <h3>SAULO PEDRO</h3>
+            <p class="role">ENCANADOR / MECÂNICO</p>
+            <div class="meta">
+              <span class="rating">★ 4.7</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="João Souza" data-rating="4.8" data-distance="4.6">
+          <img class="card-img" src="img/joao.png" alt="João Souza">
+          <div class="card-body">
+            <h3>JOÃO SOUZA</h3>
+            <p class="role">ENCANADOR</p>
+            <div class="meta">
+              <span class="rating">★ 4.8</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-name="Lucas Fernando" data-rating="5.0" data-distance="5.2">
+          <img class="card-img" src="img/fernando.png" alt="Lucas Fernando">
+          <div class="card-body">
+            <h3>LUCAS FERNANDO</h3>
+            <p class="role">ENCANADOR / ELETRICISTA</p>
+            <div class="meta">
+              <span class="rating">★ 5.0</span>
+              <span class="location">Santa Bárbara d'Oeste - SP</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3>SOBRE</h3>
+        <a href="quem_somos.html">Quem Somos</a>
+        <a href="missao.html">Missão</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>CONTATO</h3>
+        <a href="tel:+551940028922">📞 (19) 4002-8922</a>
+        <a href="mailto:contato@cs.com">📧 contato@cs.com</a>
+        <a href="#">Atendimento</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>PAGAMENTO</h3>
+        <div class="footer-icons">
+          <img src="img/mastercard.png" alt="Mastercard">
+          <img src="img/visa.png" alt="Visa">
+          <img src="img/pix.png" alt="Pix">
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>SIGA-NOS</h3>
+        <div class="footer-icons">
+          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>BAIXAR APP</h3>
+        <div class="store-buttons">
+          <a href="#"><img src="img/googleplay.png" alt="Google Play"></a>
+          <a href="#"><img src="img/apple.png" alt="App Store"></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

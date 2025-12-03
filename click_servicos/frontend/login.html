@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickServiço - Login</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-left">
+      <h2>Bem-vindo(a) ao</h2>
+      <img src="img/click2.png" alt="ClickServiço" class="logo">
+      <h1>ClickServiço</h1>
+    </div>
+
+    <div class="login-right">
+      <form id="loginForm" class="login-form">
+        <h2>Acesse a sua conta</h2>
+
+        <div class="input-group">
+          <img src="img/email.png" alt="Email" class="icon">
+          <input type="text" id="email" placeholder="E-mail" required>
+        </div>
+
+        <div class="input-group">
+          <img src="img/cadeado.png" alt="Senha" class="icon">
+          <input type="password" id="password" placeholder="Senha" required>
+          <img src="img/olho_fechado.png" id="toggleSenhaLogin" class="toggleSenha">
+        </div>
+
+        <button type="submit" class="btn">ENTRAR</button>
+
+        <a href="recuperar.html" class="forgot">Esqueci minha senha</a>
+
+        <p class="register-text">
+          Ainda não tem cadastro?  
+          <a href="cadastro.html" class="register-link">Crie uma conta</a>
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
+

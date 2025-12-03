@@ -1,0 +1,130 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model usuarios {
+  id_usuario    Int            @id @default(autoincrement())
+  nome          String
+  email         String          @unique
+  senha         String
+  tipo          TipoUsuario
+  celular       String
+  data_cadastro DateTime        @default(now())
+
+  // Relação com subcategorias (profissões)
+  subcategorias ProfissionalSubcategoria[]
+}
+
+model categorias {
+  id_categoria   Int              @id @default(autoincrement())
+  nome_categoria String
+  descricao      String?
+
+  subcategorias  subcategorias[]
+}
+
+model subcategorias {
+  id_subcategoria   Int           @id @default(autoincrement())
+  id_categoria      Int
+  nome_subcategoria String
+  descricao         String?
+
+  categoria         categorias     @relation(fields: [id_categoria], references: [id_categoria])
+
+  profissionais     ProfissionalSubcategoria[]
+}
+
+model ProfissionalSubcategoria {
+  id_usuario      Int
+  id_subcategoria Int
+
+  usuario         usuarios        @relation(fields: [id_usuario], references: [id_usuario])
+  subcategoria    subcategorias   @relation(fields: [id_subcategoria], references: [id_subcategoria])
+
+  @@id([id_usuario, id_subcategoria])
+}
+
+model localizacoes {
+  id_localizacao Int      @id @default(autoincrement())
+  id_usuario     Int
+  cep            String?
+  logradouro     String?
+  numero         String?
+  complemento    String?
+  bairro         String?
+  cidade         String?
+  estado         String?
+  latitude       Decimal? @db.Decimal(10, 8)
+  longitude      Decimal? @db.Decimal(11, 8)
+
+  @@index([id_usuario], map: "localizacoes_id_usuario_fkey")
+}
+
+model servicos {
+  id_servico      Int      @id @default(autoincrement())
+  id_profissional Int
+  id_subcategoria Int?
+  id_localizacao  Int?
+  titulo          String
+  descricao       String?
+  preco_base      Decimal? @db.Decimal(10, 2)
+  data_criacao    DateTime @default(now())
+
+  @@index([id_localizacao], map: "servicos_id_localizacao_fkey")
+  @@index([id_subcategoria], map: "servicos_id_subcategoria_fkey")
+  @@index([id_profissional], map: "servicos_id_profissional_fkey")
+}
+
+model pedidos {
+  id_pedido   Int          @id @default(autoincrement())
+  id_cliente  Int
+  id_servico  Int
+  data_pedido DateTime     @default(now())
+  status      StatusPedido @default(pendente)
+  observacoes String?
+
+  @@index([id_cliente], map: "pedidos_id_cliente_fkey")
+  @@index([id_servico], map: "pedidos_id_servico_fkey")
+}
+
+model avaliacoes {
+  id_avaliacao    Int      @id @default(autoincrement())
+  id_pedido       Int      @unique
+  id_avaliador    Int
+  id_profissional Int
+  nota            Int
+  comentario      String?
+  data_avaliacao  DateTime @default(now())
+
+  @@index([id_avaliador], map: "avaliacoes_id_avaliador_fkey")
+  @@index([id_profissional], map: "avaliacoes_id_profissional_fkey")
+}
+
+model mensagens {
+  id_mensagem     Int      @id @default(autoincrement())
+  id_remetente    Int?
+  id_destinatario Int?
+  conteudo        String?
+  data_envio      DateTime @default(now())
+
+  @@index([id_destinatario], map: "mensagens_id_destinatario_fkey")
+  @@index([id_remetente], map: "mensagens_id_remetente_fkey")
+}
+
+enum TipoUsuario {
+  cliente
+  profissional
+}
+
+enum StatusPedido {
+  pendente
+  em_andamento
+  concluido
+  cancelado
+}

@@ -1,0 +1,136 @@
+:root {
+  --azul: #1f3c88;
+  --laranja: #fddfa2;
+  --amarelo-claro: #ffeecb;
+  --cinza-claro: #f2f2f2;
+  --texto: #222;
+  --radius: 12px;
+  --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --font: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+
+body {
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* === Container principal === */
+.cadastro-container {
+  background: #fff;
+  width: 450px;
+  max-width: 95%;
+  padding: 45px 40px;
+  border-radius: 15px;
+  box-shadow: var(--sombra);
+}
+
+/* === Formulário === */
+.cadastro-form h1 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--azul);
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+/* === Inputs === */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: var(--cinza-claro);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+/* === Ícone de mostrar senha === */
+.toggleSenha {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  opacity: 0.5;
+  position: absolute;
+  right: 12px;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+}
+
+/* === Botão === */
+.btn {
+  width: 100%;
+  background: var(--amarelo-claro);
+  border: none;
+  color: var(--texto);
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #ffe299;
+}
+
+/* === Link inferior === */
+.link-voltar {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 18px;
+}
+
+.link-voltar a {
+  color: var(--azul);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-voltar a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsivo === */
+@media (max-width: 480px) {
+  .cadastro-container {
+    width: 90%;
+    padding: 30px 25px;
+  }
+
+  .cadastro-form h1 {
+    font-size: 1.3rem;
+  }
+}

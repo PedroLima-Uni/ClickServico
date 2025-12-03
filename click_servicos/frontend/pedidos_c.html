@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickServiço - Meus Pedidos</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/pedidos_c.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="inicial.html" class="logo" style="text-decoration: none; color: inherit;">
+      <img src="img/click2.png" alt="ClickServiço" />
+      <span>ClickServiço</span>
+    </a>
+
+    <div class="search-wrapper">
+      <input type="text" placeholder="Buscar serviços, profissionais..." class="search-bar">
+      <div class="search-divider"></div>
+      <img src="img/lupa_escura.png" class="search-icon" alt="Buscar">
+    </div>
+
+    <div class="buttons">
+      <button class="btn-profissional">Seja um profissional</button>
+      <a href="#" class="link active">Meus pedidos</a>
+      
+      <div class="user-area">
+        <a href="login.html" id="btnEntrar" class="link">Entrar</a>
+
+        <div id="userMenu" class="user-dropdown">
+          <div class="user-info-dropdown">
+            <span id="userGreeting">Olá, Visitante</span>
+          </div>
+          <hr>
+          <button id="logoutBtn" class="logout-btn">Sair</button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="page pedidos-page">
+    <section class="content">
+
+      <div class="tabs">
+        <button class="tab active" data-status="aguardando">Aguardando profissional</button>
+        <button class="tab" data-status="andamento">Em andamento</button>
+        <button class="tab" data-status="concluido">Concluído</button>
+        <button class="tab" data-status="cancelado">Cancelado</button>
+      </div>
+
+      <div id="listaPedidos" class="lista-pedidos"></div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3>SOBRE</h3>
+        <a href="quem_somos.html">Quem Somos</a>
+        <a href="missao.html">Missão</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>CONTATO</h3>
+        <a href="tel:+551940028922">📞 (19) 4002-8922</a>
+        <a href="mailto:contato@cs.com">📧 contato@cs.com</a>
+        <a href="#">Atendimento</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>PAGAMENTO</h3>
+        <div class="footer-icons">
+          <img src="img/mastercard.png" alt="Mastercard">
+          <img src="img/visa.png" alt="Visa">
+          <img src="img/pix.png" alt="Pix">
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>SIGA-NOS</h3>
+        <div class="footer-icons">
+          <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>BAIXAR APP</h3>
+        <div class="store-buttons">
+          <a href="#"><img src="img/googleplay.png" alt="Google Play"></a>
+          <a href="#"><img src="img/apple.png" alt="App Store"></a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/pedidos_c.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickServiço - Mensagens</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="inicial.html" class="logo" style="text-decoration: none; color: inherit;">
+      <img src="img/click2.png" alt="ClickServiço" />
+      <span>ClickServiço</span>
+    </a>
+
+    <div class="search-wrapper">
+      <input type="text" placeholder="Buscar serviços, profissionais..." class="search-bar">
+      <div class="search-divider"></div>
+      <img src="img/lupa_escura.png" class="search-icon" alt="Buscar">
+    </div>
+
+    <div class="buttons">
+      <button class="btn-profissional">Seja um profissional</button>
+      <a href="#" class="link">Meus pedidos</a>
+      <span class="link">Caputi</span>
+    </div>
+  </header>
+
+  <main class="chat-container">
+
+    <aside class="sidebar">
+      <h2>Mensagens</h2>
+
+      <div class="chat-list">
+        <div class="chat-item active">
+          <img src="img/rodolfo.png" alt="Usuário">
+          <div class="chat-info">
+            <p class="name">Rodolfo Guimarães</p>
+            <p class="preview">Boa noite, gostaria de confirmar seu ag...</p>
+          </div>
+          <span class="date">30/10</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat-main">
+      <div class="chat-header">
+        <img src="img/rodolfo.png" alt="Usuário">
+        <h3>Rodolfo Guimarães</h3>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="message sent">Boa noite, enviei um orçamento referente a um serviço na minha casa</div>
+
+        <div class="message received">
+          <p>Boa noite, gostaria de confirmar seu agendamento para a próxima sexta às 10h?</p>
+        </div>
+      </div>
+
+      <form id="messageForm" class="message-input">
+        <input type="text" id="messageText" placeholder="Escreva uma mensagem..." autocomplete="off">
+        <button type="submit">➤</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="js/chat.js"></script>
+
+</body>
+</html>

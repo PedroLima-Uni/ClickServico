@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickServiço - Cadastro</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cadastro-container">
+    <form id="cadastroForm" class="cadastro-form">
+      <h1>Crie sua conta</h1>
+
+      <div class="input-group">
+        <img src="img/usuario.png" alt="ClickServiço" class="icon">
+        <input type="text" id="nome" placeholder="Nome completo" required>
+      </div>
+
+      <div class="input-group">
+        <img src="img/email.png" alt="ClickServiço" class="icon">
+        <input type="email" id="email" placeholder="E-mail" required>
+      </div>
+
+      <div class="input-group">
+        <img src="img/celular.png" alt="ClickServiço" class="icon">
+        <input type="tel" id="celular" placeholder="Celular com DDD (ex: 19987654321)" maxlength="11" required>
+      </div>
+
+      <div class="input-group">
+        <img src="img/cadeado.png" alt="ClickServiço" class="icon">
+
+        <input type="password" id="senha" placeholder="Senha" required>
+
+        <img src="img/olho_fechado.png" class="toggleSenha" id="toggleSenhaIcon" alt="Mostrar senha" style="display:none;">
+      </div>
+
+      <div class="input-group">
+        <img src="img/cadeado_conf.png" alt="ClickServiço" class="icon">
+        <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
+      </div>
+
+      <p id="senhaMatchMsg" style="font-size: 0.85rem; margin-top: 10px; margin-bottom: 10px;"></p>
+
+      <div class="input-group select-group">
+        <img src="img/engrenagem.png" alt="ClickServiço" class="icon">
+        <select id="tipoUsuario" required>
+            <option value="" disabled selected>Selecione o tipo de usuário</option>
+            <option value="cliente">Cliente</option>
+            <option value="profissional">Profissional</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">CADASTRAR</button>
+
+      <p class="link-voltar">
+        Já tem uma conta? <a href="login.html">Entrar</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

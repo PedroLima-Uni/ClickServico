@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickServiço - Profissionais à um clique</title>
+  <link rel="icon" type="image/png" href="img/click2.png">
+  <link rel="stylesheet" href="css/inicial.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="inicial.html" class="logo" style="text-decoration: none; color: inherit;">
+      <img src="img/click2.png" alt="ClickServiço" />
+      <span>ClickServiço</span>
+    </a>
+
+    <div class="search-wrapper">
+      <input type="text" placeholder="Buscar serviços, profissionais..." class="search-bar">
+      <div class="search-divider"></div>
+      <img src="img/lupa_escura.png" class="search-icon" alt="Buscar">
+    </div>
+
+    <div class="buttons">
+      <a href="seja_profissional.html">
+        <button class="btn-profissional">Seja um profissional</button>
+      </a>
+
+      <a href="#" class="link">Meus pedidos</a>
+
+      <div class="user-area">
+        <a href="login.html" id="btnEntrar" class="btn-login">Entrar</a>
+        <div id="userMenu" class="user-dropdown" style="display: none;">
+          <div class="user-info-dropdown">
+            <span id="userGreeting">Olá, Visitante</span>
+          </div>
+          <hr>
+          <button id="logoutBtn" class="logout-btn">Sair</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="carousel">
+    <div class="slides">
+      <img src="img/banner1.png" alt="Banner 1">
+      <img src="img/banner2.png" alt="Banner 2">
+      <img src="img/banner3.png" alt="Banner 3">
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+    <div class="carousel-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+  </section>
+
+  <div class="gradient-transition"></div>
+
+  <section class="categorias-container">
+    <h2 class="categorias-titulo">CATEGORIAS</h2>
+    
+    <div class="categorias-grid">
+      <div class="categoria-item">
+        <img src="img/assistencia.png" alt="Assistência Técnica">
+        <span>Assistência Técnica</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/aulas.png" alt="Aulas e Consultoria">
+        <span>Aulas e Consultoria</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/autos.png" alt="Autos">
+        <span>Autos</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/design.png" alt="Design e Tecnologia">
+        <span>Design e Tecnologia</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/eventos.png" alt="Eventos">
+        <span>Eventos</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/moda.png" alt="Moda e Beleza">
+        <span>Moda e Beleza</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/casa.png" alt="Casa e Reformas">
+        <span>Casa e Reformas</span>
+      </div>
+      <div class="categoria-item">
+        <img src="img/saude.png" alt="Saúde">
+        <span>Saúde</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="subcategorias" class="subcategorias-container">
+    <h2 id="subcat-titulo">Título da Categoria</h2>
+    
+    <div id="subcat-grid" class="subcategorias-grid"></div>
+  </section>
+
+  <section class="como-funciona">
+    <h2>COMO FUNCIONA?</h2>
+    <div class="funciona-container">
+      <div class="funciona-item">
+        <img src="img/lupa_escura.png" alt="Buscar profissionais">
+        <p>Busque por profissionais<br>por perto</p>
+      </div>
+      <div class="funciona-item">
+        <img src="img/trabalhador.png" alt="Profissionais avaliados">
+        <p>Faça orçamentos com<br>profissionais avaliados</p>
+      </div>
+      <div class="funciona-item">
+        <img src="img/escudo.png" alt="Segurança sempre">
+        <p>Segurança sempre:<br>Da identificação ao pagamento</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pronto-profissional">
+    <div class="pronto-texto">
+      <p>
+        <em>Está pronto para<br>
+        encontrar o profissional<br>
+        ideal para a<br>
+        sua necessidade?</em>
+      </p>
+
+      <a href="categorias.html">
+        <button class="btn-categoria">Escolher categoria</button>
+      </a>
+    </div>
+
+    <div class="pronto-imagem"> 
+      <img src="img/furadeira.png" alt="Profissional com furadeira">
+    </div>
+  </section>
+
+  <section class="avaliacao-clientes">
+    <h2 class="titulo-avaliacao">AVALIAÇÃO DOS CLIENTES</h2>
+    <div class="avaliacao-cards">
+      <div class="avaliacao-card">
+        <img src="img/aval1.png" alt="Avaliação 1">
+      </div>
+      <div class="avaliacao-card">
+        <img src="img/aval2.png" alt="Avaliação 2">
+      </div>
+    </div>
+  </section>
+
+  <section class="secao-profissional">
+    <div class="prof-container">
+      <div class="prof-img">
+        <img src="img/acordo.png" alt="Acordo entre profissional e cliente">
+      </div>
+      <div class="prof-texto">
+        <h2>QUER SE TORNAR UM PROFISSIONAL?</h2>
+        <h3>CONFIRA OS BENEFÍCIOS:</h3>
+        <ul>
+          <li>Ampliação da visibilidade profissional</li>
+          <li>Aumento das oportunidades de renda</li>
+          <li>Gestão facilitada do trabalho</li>
+          <li>Credibilidade e confiança</li>
+          <li>Baixo custo e retorno real</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-box">
+              <h3>SOBRE</h3>
+              <a href="quem_somos.html">Quem Somos</a>
+              <a href="missao.html">Missão</a>
+          </div>
+          <div class="footer-box">
+              <h3>CONTATO</h3>
+              <a href="tel:+551940028922">📞 (19) 4002-8922</a>
+              <a href="mailto:contato@cs.com">📧 contato@cs.com</a>
+              <a href="#">Atendimento</a>
+          </div>
+          <div class="footer-box">
+              <h3>PAGAMENTO</h3>
+              <div class="footer-icons">
+                  <img src="img/mastercard.png" alt="Mastercard">
+                  <img src="img/visa.png" alt="Visa">
+                  <img src="img/pix.png" alt="Pix">
+              </div>
+          </div>
+          <div class="footer-box">
+              <h3>SIGA-NOS</h3>
+              <div class="footer-icons">
+                  <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                  <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+              </div>
+          </div>
+          <div class="footer-box">
+              <h3>BAIXAR APP</h3>
+              <div class="store-buttons">
+                  <a href="#"><img src="img/googleplay.png" alt="Google Play"></a>
+                  <a href="#"><img src="img/apple.png" alt="App Store"></a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script src="js/inicial.js"></script>
+</body>
+</html>
